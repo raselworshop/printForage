@@ -14,7 +14,7 @@ export default function Home() {
               height={660}
               priority
             />
-            <div className="absolute left-1/2 top-1/2 z-50 w-full h-1/4 sm:h-1/5 bg-white flex items-center justify-center"
+            <div className="absolute left-1/2 top-1/2 z-30 w-full h-1/4 sm:h-1/5 bg-white flex items-center justify-center"
             style={{ transform: 'translate(-50%, -50%) rotate(45deg)' }}>
              <div className=" w-32 h-32 sm:w-48 sm:h-48 bg-white hover:bg-blue-500 rounded-full transition-all duration-300"></div>
             </div>
