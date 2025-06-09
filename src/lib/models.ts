@@ -8,3 +8,17 @@ export async function getAllModels(): Promise<Model[]> {
     return modelData as Model[]; 
     // return modelData;
 }
+
+export async function getModelById(id: string): Promise<Model | null> {
+      // These functions don't technically need to be async functions,
+  // but we're planning for the future when they'll be fetching
+  // from a real data source.
+    // const models = await getAllModels();
+    // return models.find(model => model.id === parseInt(id)) || null;
+    const foundModel = modelData.find((model: Model)=> model.id.toString() === id.toString())
+
+    if (!foundModel) {
+        throw new Error(`Model with id ${id} not found`);
+    }
+    return foundModel;
+}
