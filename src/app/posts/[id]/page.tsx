@@ -1,6 +1,6 @@
-import { Post } from "@/types";
-export default async function postDetails({params}:{params:{ id: string }}) {
-    const { id } = params;
+import { ModelDetailsPageProps, Post } from "@/types";
+export default async function postDetails({ params }: ModelDetailsPageProps) {
+    const { id } = await params;
     console.log("Post Details Params:", params, id);
     const url = `https://jsonplaceholder.typicode.com/posts/${id}`;
     console.log("Fetching URL:", url);
